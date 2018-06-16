@@ -1,3 +1,8 @@
-a = 5
+#a = 5
 
-print(a)
+#print(a)
+
+def my_print_method(my_parameter):
+    print(my_parameter)
+
+my_print_method('hello, world.')

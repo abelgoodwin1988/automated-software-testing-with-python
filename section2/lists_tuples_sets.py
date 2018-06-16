@@ -1,6 +1,16 @@
-my variable = "hello"
+my_variable = "hello"
 
-grade_on = 77
-grade_two = 80
-grade_three = 90
+grades = [
+    77, 80, 90, 95, 100
+]
+typle_grades = (
+    77, 80, 90, 95, 100
+)
+set_grades = {
+    77, 80, 90, 100, 100
+}
 
+print(sum(grades) / len(grades))
+grades.append(108)
+print(sum(grades) / len(grades))
+print(set_grades)

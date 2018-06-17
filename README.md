@@ -8,4 +8,6 @@ with python and pip installed:
 
 > pipenv install
 
-> Use the venv for python as your interpreter.
+> pipenv --venv
+
+> Use the venv location for python as your interpreter.

@@ -23,3 +23,7 @@ print(your_lottery_numbers.union(winning_numbers))
 
 single_typle = ('value',)
 print(len(single_typle))
+
+q = tuple(100)
+
+print (q)

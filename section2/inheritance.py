@@ -8,18 +8,19 @@ class Student:
         return sum(self.marks) / len(self.marks)
 
     @classmethod
-    def friend(cls, origin, friend_name, salary):
-        return cls(friend_name, origin.school, salary)
+    def friend(cls, origin, friend_name, *args):
+        return cls(friend_name, origin.school, *args)
 
 class WorkingStudent(Student):
-    def __init__(self, name, school, salary):
+    def __init__(self, name, school, salary, job_title):
         super().__init__(name, school)
         self.salary = salary
+        self.job_title = job_title
 
-anna = WorkingStudent("Anna", "Oxford", 20.00)
+anna = WorkingStudent("Anna", "Oxford", 20.00, "Software Dev")
 print(anna.salary)
 
-friend = WorkingStudent.friend(anna, "Greg", 17.50)
+friend = WorkingStudent.friend(anna, "Greg", 17.50, "software dev")
 print(friend.name)
 print(friend.school)
 

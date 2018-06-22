@@ -9,6 +9,6 @@ class AppTest(TestCase):
         blog = Blog('Test', 'Test Author')
         app.blogs = {'Test': blog}
 
-        with patch('builtings.print') as mocked_print:
+        with patch('builtins.print') as mocked_print:
             app.print_blogs()
             mocked_print.assert_called_with('- Test by Test Author (0 posts)')

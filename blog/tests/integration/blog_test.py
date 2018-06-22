@@ -1,7 +1,6 @@
 from unittest import TestCase
 from blog import Blog
 
-
 class BlogTest(TestCase):
 
     def test_create_post_in_blog(self):

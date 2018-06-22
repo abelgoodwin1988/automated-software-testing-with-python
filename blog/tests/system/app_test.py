@@ -11,3 +11,6 @@ class AppTest(TestCase):
         with patch('builtins.print') as mocked_print:
             app.print_blogs()
             mocked_print.assert_called_with('- Test by Test Author (0 posts)')
+    
+    def test_2_2(self):
+        self.assertEqual(2,2)

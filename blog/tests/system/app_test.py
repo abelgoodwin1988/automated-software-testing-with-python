@@ -4,6 +4,7 @@ from blog import Blog
 import app
 
 class AppTest(TestCase):
+    
     def test_print_blogs(self):
         blog = Blog('Test', 'Test Author')
         app.blogs = {'Test': blog}

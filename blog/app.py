@@ -13,3 +13,5 @@ def print_blogs():
     # [(blog_name, Blog), (blog_name, Blog)]
     for key, blog in blogs.items(): 
         print('- {}'.format(blog))
+
+menu()

@@ -4,15 +4,11 @@ blogs = dict('')  # blog_name : Blog object
 
 def menu():
     # show the user the available blogs
+    print_blogs()
     # let the user make a choice
+    selection = input(MENU_PROMPT)
     # do something with that choice
     # eventually exit
-
-    print_blogs()
-    selection = get_input()
-    
-def get_input():
-    return input(MENU_PROMPT)
 
 def print_blogs():
     # Print the available blogs
@@ -20,4 +16,4 @@ def print_blogs():
     for key, blog in blogs.items(): 
         print('- {}'.format(blog))
 
-menu()
+#menu()

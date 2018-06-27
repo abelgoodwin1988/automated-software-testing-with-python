@@ -2,9 +2,6 @@ from blog import Blog
 from post import Post
 
 MENU_PROMPT = 'Enter "c" to create a blog, "l" to list blogs, "r" to read one, "p" to create a post, or "q" to quit. '
-ASK_CREATE_POST_PROMPT_BLOG_TITLE = 'Enter the title of a blog above: '
-ASK_CREATE_POST_PROMPT_POST_TITLE = 'Enter the title of the post: '
-ASK_CREATE_POST_PROMPT_POST_CONTENT = 'Enter the content of the post: '
 POST_PRINT_TEMPLATE = '''
 --- {} ---
 
@@ -32,6 +29,12 @@ def menu():
         selection = input(MENU_PROMPT)
     # eventually exit
 
+def ask_create_blog():
+    title = input('Enter title name: ')
+    author = input('Enter Author name: ')
+    blogs.update({title: Blog(title, author)})
+
+
 def print_blogs():
     # Print the available blogs
     # [(blog_name, Blog), (blog_name, Blog)]
@@ -40,11 +43,6 @@ def print_blogs():
     else:
         for key, blog in blogs.items():
             print('- {}'.format(blog))
-
-def ask_create_blog():
-    title = input('Enter title name: ')
-    author = input('Enter Author name: ')
-    blogs.update({title: Blog(title, author)})
 
 def ask_read_blog():
     list_blog_titles()
@@ -57,9 +55,10 @@ def ask_read_blog():
 
 def ask_create_post():
     list_blog_titles()
-    blog_title = input(ASK_CREATE_POST_PROMPT_BLOG_TITLE)
-    post_title = input(ASK_CREATE_POST_PROMPT_POST_TITLE)
-    post_content = input(ASK_CREATE_POST_PROMPT_POST_CONTENT)
+    blog_title = input('Enter the title of a blog above: ')
+    post_title = input('Enter the title of the post: ')
+    post_content = input('Enter the content of the post: ')
+
     blogs[blog_title].create_post(post_title, post_content)
 
 def list_blog_titles():

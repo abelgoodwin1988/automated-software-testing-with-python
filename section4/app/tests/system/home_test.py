@@ -1,5 +1,5 @@
-from unittest import TestCase
-from app import app
+from basetest import BaseTest
+import json
 
 class TestHome(TestCase):
     def test_home(self):
@@ -7,3 +7,5 @@ class TestHome(TestCase):
             resp = c.get('/')
 
             self.assertEqual(resp.status_code, 200)
+            self.assertEqual(json.loads(resp.get_data()),
+                             {'message': 'Hello, World!'})

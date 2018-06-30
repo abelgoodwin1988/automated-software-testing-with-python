@@ -1,7 +1,7 @@
 """
 BaseTest
 
-This lcass should be the parent class to each non-unit test.
+This class should be the parent class to each non-unit test.
 It allows for instantion of the database dynamically
 and makes sure that is is a new, blank database each time.
 """

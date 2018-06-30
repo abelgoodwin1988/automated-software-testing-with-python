@@ -1,7 +1,7 @@
 """
 BaseTest
 
-This class should be the parent class to each non-unit test.
+This lcass should be the parent class to each non-unit test.
 It allows for instantion of the database dynamically
 and makes sure that is is a new, blank database each time.
 """
@@ -23,6 +23,6 @@ class BaseTest(TestCase):
 
     def tearDown(self):
         # Database is blank
-        with app.app_context()
+        with app.app_context():
             db.session.remove()
             db.drop_all()

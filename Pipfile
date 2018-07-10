@@ -9,10 +9,8 @@ Flask = "*"
 Flask-RESTful = "*"
 Flask-SQLAlchemy = "*"
 Flask-JWT = "*"
-uWSGI = "*"
 
 [dev-packages]
-pylint = "*"
 "autopep8" = "*"
 "flake8" = "*"
 

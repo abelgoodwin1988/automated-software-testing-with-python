@@ -14,7 +14,7 @@ class ItemTest(TestCase):
                          "The price of the item after creation does not equal the constructor argument.")
 
     def test_item_json(self):
-        item = ItemModel('test', 19.99,1)
+        item = ItemModel('test', 19.99, 1)
         expected = {
             'name': 'test',
             'price': 19.99
